@@ -60,12 +60,13 @@ public class Circle {
     public double getArcLength(int angle) {
         return Math.PI * this.getRadius() * angle/180;
     }
+
     public double getSectorArea(int angle) {
         return getArcLength(angle) * this.getRadius()/2;
     }
 
     public double getChordLength(int angle) {
-        return 2 * this.getRadius() * Math.sin(angle/2);
+        return 2 * this.getRadius() * Math.sin((double) angle/2);
     }
 
     public boolean belongToCircle(int x, int y) {
